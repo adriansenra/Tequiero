@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sorpresa de Cumpleaños</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -21,23 +21,23 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
-      padding: 2rem;
+      padding: 1rem;
       position: relative;
       overflow: hidden;
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
       color: #7b3e19;
       animation: fadeIn 2s ease-in-out;
     }
 
     p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-      max-width: 600px;
+      font-size: 1rem;
+      margin: 0.8rem 0;
+      max-width: 90vw;
       animation: fadeIn 3s ease-in-out;
     }
 
@@ -46,27 +46,21 @@
       border: 2px solid #d7b49e;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      padding: 2rem;
-      margin-top: 2rem;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
       animation: fadeIn 4s ease-in-out;
       z-index: 2;
       position: relative;
-      max-width: 700px;
-      width: 90%;
-    }
-
-    .card img {
+      max-width: 90vw;
       width: 100%;
-      border-radius: 15px;
-      margin-bottom: 1rem;
     }
 
     .cta {
-      margin-top: 2rem;
-      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
       background-color: #e17b5f;
       color: white;
-      padding: 0.8rem 1.5rem;
+      padding: 0.7rem 1.2rem;
       border: none;
       border-radius: 30px;
       cursor: pointer;
@@ -83,7 +77,7 @@
 
     .corner-photo {
       position: absolute;
-      width: 250px; /* fotos más grandes */
+      width: 130px;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -92,26 +86,26 @@
     }
 
     .corner-photo.top-left {
-      top: 20px;
-      left: 20px;
+      top: 10px;
+      left: 10px;
       transform: rotate(-10deg);
     }
 
     .corner-photo.top-right {
-      top: 20px;
-      right: 20px;
+      top: 10px;
+      right: 10px;
       transform: rotate(8deg);
     }
 
     .corner-photo.bottom-left {
-      bottom: 20px;
-      left: 20px;
+      bottom: 10px;
+      left: 10px;
       transform: rotate(7deg);
     }
 
     .corner-photo.bottom-right {
-      bottom: 20px;
-      right: 20px;
+      bottom: 10px;
+      right: 10px;
       transform: rotate(-6deg);
     }
 
@@ -119,14 +113,43 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Para pantallas más grandes */
+    @media(min-width: 768px) {
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 1.2rem;
+        max-width: 600px;
+      }
+      .card {
+        max-width: 700px;
+        width: 90%;
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+      .corner-photo {
+        width: 250px;
+      }
+      .corner-photo.top-left { top: 20px; left: 20px; }
+      .corner-photo.top-right { top: 20px; right: 20px; }
+      .corner-photo.bottom-left { bottom: 20px; left: 20px; }
+      .corner-photo.bottom-right { bottom: 20px; right: 20px; }
+      .cta {
+        font-size: 1.3rem;
+        padding: 0.8rem 1.5rem;
+        margin-top: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Fotos en las esquinas -->
-  <img src="foto1.jpg" alt="Foto 1" class="corner-photo top-left">
-  <img src="foto2.jpg" alt="Foto 2" class="corner-photo top-right">
-  <img src="foto3.jpg" alt="Foto 3" class="corner-photo bottom-left">
-  <img src="foto4.jpg" alt="Foto 4" class="corner-photo bottom-right">
+  <img src="foto1.jpg" alt="Foto 1" class="corner-photo top-left" />
+  <img src="foto2.jpg" alt="Foto 2" class="corner-photo top-right" />
+  <img src="foto3.jpg" alt="Foto 3" class="corner-photo bottom-left" />
+  <img src="foto4.jpg" alt="Foto 4" class="corner-photo bottom-right" />
 
   <!-- Contenido principal -->
   <h1>¡Feliz Cumpleaños, mi amor!</h1>
@@ -140,7 +163,7 @@
   <a class="cta" href="pista1.html">¿Estás lista?</a>
 
   <audio autoplay loop>
-    <source src="musica1.mp3" type="audio/mpeg">
+    <source src="musica1.mp3" type="audio/mpeg" />
     Tu navegador no soporta el audio.
   </audio>
 </body>
