@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Segunda Pista</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(to bottom, #f4e2d8, #ba9470);
@@ -16,20 +21,24 @@
       min-height: 100vh;
       text-align: center;
       padding: 2rem;
+      position: relative;
+      overflow: hidden;
     }
-
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 3rem;
       color: #7b3e19;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+      z-index: 2;
     }
-
     p {
       font-size: 1.2rem;
       max-width: 600px;
       margin: 1.5rem 0;
+      animation: fadeIn 3s ease-in-out;
+      z-index: 2;
     }
-
     .cta {
       font-size: 1.2rem;
       background-color: #e17b5f;
@@ -40,14 +49,56 @@
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      margin-top: 1.5rem;
+      z-index: 2;
+      display: inline-block;
     }
-
     .cta:hover {
       background-color: #c6654c;
+    }
+    .corner-photo {
+      position: absolute;
+      width: 180px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      object-fit: cover;
+      z-index: 1;
+    }
+    .corner-photo.top-left {
+      top: 20px;
+      left: 20px;
+      transform: rotate(-10deg);
+    }
+    .corner-photo.top-right {
+      top: 20px;
+      right: 20px;
+      transform: rotate(8deg);
+    }
+    .corner-photo.bottom-left {
+      bottom: 20px;
+      left: 20px;
+      transform: rotate(7deg);
+    }
+    .corner-photo.bottom-right {
+      bottom: 20px;
+      right: 20px;
+      transform: rotate(-6deg);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <!-- Fotos en las esquinas -->
+  <img src="foto9.jpg" alt="Foto 9" class="corner-photo top-left" />
+  <img src="foto10.jpg" alt="Foto 10" class="corner-photo top-right" />
+  <img src="foto11.jpg" alt="Foto 11" class="corner-photo bottom-left" />
+  <img src="foto12.jpg" alt="Foto 12" class="corner-photo bottom-right" />
+
+  <!-- Contenido principal -->
   <h1>Segunda pista 🌞</h1>
   <p>En esta ciudad podrás perderte por zocos interminables, escuchar música en las plazas, y oler a azafrán, cuero y jazmín.</p>
   <p>¿Te suena familiar?</p>
