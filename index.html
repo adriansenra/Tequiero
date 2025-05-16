@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorpresa de Cumpleaños</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #f4e2d8, #ba9470);
+      color: #4b2e2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #7b3e19;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      max-width: 600px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .card {
+      background-color: #fff8f0;
+      border: 2px solid #d7b49e;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-top: 2rem;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      background-color: #e17b5f;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta:hover {
+      background-color: #c6654c;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Feliz Cumpleaños, mi amor!</h1>
+  <p>Te mereces lo mejor del mundo... por eso este año quiero regalarte una experiencia inolvidable.</p>
+  
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Marrakech_Morocco_Djemaa_el-Fna.jpg/800px-Marrakech_Morocco_Djemaa_el-Fna.jpg" alt="Marrakech">
+    <p>🎉 ¡Nos vamos de viaje a ....! 🌴</p>
+    <p>Prepárate para perderte por sus zocos, saborear el té con menta, y ver atardeceres mágicos en el desierto.</p>
+  </div>
+
+  <a class="cta" href="pista1.html">¿Estás lista?</a>
+
+  <audio autoplay loop>
+    <source src="musica1.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+</body>
+</html>
