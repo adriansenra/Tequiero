@@ -22,6 +22,8 @@
       min-height: 100vh;
       text-align: center;
       padding: 2rem;
+      position: relative;
+      overflow: hidden;
     }
 
     h1 {
@@ -47,6 +49,10 @@
       padding: 2rem;
       margin-top: 2rem;
       animation: fadeIn 4s ease-in-out;
+      z-index: 2;
+      position: relative;
+      max-width: 700px;
+      width: 90%;
     }
 
     .card img {
@@ -67,10 +73,46 @@
       transition: background-color 0.3s ease;
       text-decoration: none;
       display: inline-block;
+      z-index: 2;
+      position: relative;
     }
 
     .cta:hover {
       background-color: #c6654c;
+    }
+
+    .corner-photo {
+      position: absolute;
+      width: 250px; /* fotos más grandes */
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .corner-photo.top-left {
+      top: 20px;
+      left: 20px;
+      transform: rotate(-10deg);
+    }
+
+    .corner-photo.top-right {
+      top: 20px;
+      right: 20px;
+      transform: rotate(8deg);
+    }
+
+    .corner-photo.bottom-left {
+      bottom: 20px;
+      left: 20px;
+      transform: rotate(7deg);
+    }
+
+    .corner-photo.bottom-right {
+      bottom: 20px;
+      right: 20px;
+      transform: rotate(-6deg);
     }
 
     @keyframes fadeIn {
@@ -80,11 +122,17 @@
   </style>
 </head>
 <body>
+  <!-- Fotos en las esquinas -->
+  <img src="foto1.jpg" alt="Foto 1" class="corner-photo top-left">
+  <img src="foto2.jpg" alt="Foto 2" class="corner-photo top-right">
+  <img src="foto3.jpg" alt="Foto 3" class="corner-photo bottom-left">
+  <img src="foto4.jpg" alt="Foto 4" class="corner-photo bottom-right">
+
+  <!-- Contenido principal -->
   <h1>¡Feliz Cumpleaños, mi amor!</h1>
   <p>Te mereces lo mejor del mundo... por eso este año quiero regalarte una experiencia inolvidable.</p>
   
   <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Marrakech_Morocco_Djemaa_el-Fna.jpg/800px-Marrakech_Morocco_Djemaa_el-Fna.jpg" alt="Marrakech">
     <p>🎉 ¡Nos vamos de viaje a ....! 🌴</p>
     <p>Prepárate para perderte por sus zocos, saborear el té con menta, y ver atardeceres mágicos en el desierto.</p>
   </div>
